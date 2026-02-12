@@ -1,6 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class variables : MonoBehaviour
 {
@@ -11,14 +12,20 @@ public class variables : MonoBehaviour
     // Start is called before the first frame update
 
     //variables unity gameEngine
-    string myName="juan";
-    void Start()
-        
-    {
-        Debug.Log("hola" + myName);
+  public  string myName = "juan";
+  public  int edad = 23;
 
-       Debug.Log("hola,mundo start()!!");
+   [SerializeField] private Tmp_ImputField _imputFIeld;
+    [SerializeField] private TMP_Text _saludo;
+
+    void Start()
+
+    {
        
+        _saludo.text = "hola" + myName;
+
+        myName = _imputFIeld 
+
         
     }
 
