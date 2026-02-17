@@ -14,17 +14,18 @@ public class variables : MonoBehaviour
     //variables unity gameEngine
   public  string myName = "juan";
   public  int edad = 23;
-
-   [SerializeField] private Tmp_ImputField _imputFIeld;
+    public bool isBoll;
+    [SerializeField] private TMP_InputField _inputFIeld;
     [SerializeField] private TMP_Text _saludo;
-
+    [SerializeField] private Renderer _cubo;
+    [SerializeField] private BoxCollider _boxcollider;
     void Start()
 
     {
-       
-        _saludo.text = "hola" + myName;
-
-        myName = _imputFIeld 
+        _cubo.material.color = Color.blue;
+       Debug.Log(_saludo.text = "hola" + myName);
+        _boxcollider.isTrigger = true;
+    
 
         
     }
@@ -32,6 +33,7 @@ public class variables : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("hola,mundo start()!!");
+        myName = _inputFIeld.text;
+        _saludo.text = "hola" + myName;
     }
 }
